@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import DehazeOutlined from '@mui/icons-material/DehazeOutlined'
-import ArrowDropDownOutlined from '@mui/icons-material/ArrowDropDownOutlined'
 
 const Container = styled.div`
 	width: 100%;
@@ -10,59 +8,53 @@ const Wrapper = styled.div`
 	margin: 0 auto;
 	width: 80%;
 	display: flex;
-	justify-content: space-between;
-`
-
-const CategoryButton = styled.div`
-	background-color: #f2f2f2;
-	display: flex;
-	padding: 5px 50px;
-	align-items: center;
-	cursor: pointer;
-`
-
-const Button = styled.div`
-	display: flex;
+	justify-content: center;
 	flex-direction: column;
-	margin-right: 10px;
 `
 
 const Menu = styled.div`
 	display: flex;
-
-`
-
-const MenuItem = styled.div`
-	margin: 0px 5px;
-	display: flex;
-	align-items: center;
+	margin-bottom: 7px;
 	justify-content: center;
 `
 
-const Shipping = styled.div`
+const MenuItem = styled.div`
+	margin: 0px 15px;
+	padding: 0px 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	transition: .5s;
+	cursor: pointer;
+	border-left: ${(props) => props.page === 'home' && '2px solid aquamarine'};
+
+	&:hover {
+		color: aquamarine;
+	}
 `
 
-const NavbarBottom = () => {
+const Hr = styled.hr`
+	margin-top: 0;
+	border: none;
+	height: 1px;
+	background-color: #fafafa;
+	width: 100%;
+`
+
+const NavbarBottom = ({page}) => {
 	return (
 		<Container>
 			<Wrapper>
-				<CategoryButton>
-					<Button>
-						<DehazeOutlined />
-					</Button>
-					Categorias
-				</CategoryButton>
+				<Hr />
 				<Menu>
-					<MenuItem><ArrowDropDownOutlined /> Início</MenuItem>
-					<MenuItem><ArrowDropDownOutlined /> Loja</MenuItem>
-					<MenuItem><ArrowDropDownOutlined /> Categorias</MenuItem>
-					<MenuItem><ArrowDropDownOutlined /> Blog</MenuItem>
-					<MenuItem><ArrowDropDownOutlined /> Contato</MenuItem>
-					<MenuItem><ArrowDropDownOutlined /> Carrinho</MenuItem>
+					<MenuItem page={page}>Início</MenuItem>
+					<MenuItem>Loja</MenuItem>
+					<MenuItem>Categorias</MenuItem>
+					<MenuItem>Blog</MenuItem>
+					<MenuItem>Contato</MenuItem>
+					<MenuItem>Carrinho</MenuItem>
 				</Menu>
-				<Shipping>
-
-				</Shipping>
 			</Wrapper>
 		</Container>
 		)
