@@ -10,7 +10,7 @@ import NavbarBottom from './NavbarBottom'
 
 const Container = styled.div`
 	width: 100%;
-	background-color: blue;
+	background-color: white;
 `
 
 const Wrapper = styled.div`
@@ -26,7 +26,7 @@ const Logo = styled.div`
 	flex: 1;
 	display: flex;
 	align-items: center;
-	color: yellow;
+	color: aquamarine;
 	font-size: 26px;
 `
 
@@ -41,7 +41,7 @@ const SearchContainer = styled.div`
 	align-items: center;
 	flex: 2;
 	border-radius: 20px;
-	border: 2px solid #f5f5f5;
+	border: 2px solid #f2f2f2;
 	height: 40px;
 	padding-left: 10px;
 	color: gray;
@@ -55,6 +55,10 @@ const Search = styled.input`
 	width: 50%;
 	color: gray;
 	font-family: 'Dosis', sans-serif;
+
+	&:focus {
+		border: none;
+	}
 `
 
 const Right = styled.div`
@@ -62,7 +66,6 @@ const Right = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	color: white;
 `
 
 const Item = styled.div`
@@ -73,16 +76,14 @@ const Item = styled.div`
 	cursor: pointer;
 	transition: .5s;
 
-	&:hover, p:hover {
-		color: aquamarine;
+	&:hover {
+		color: blue;
 	}
 `
 
 const Desc = styled.p`
-	color: white;
 	font-size: 14px;
 	margin: 0;
-	transition: .5s;
 `
 
 const Navbar = ({page}) => {
