@@ -12,14 +12,14 @@ const Wrapper = styled.div`
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	font-size: 14px;
+	font-size: 16px;
 	color: gray;
 `
 
 const Item = styled.div`
 	display: flex;
 	align-items: center;
-	margin: 0 15px;
+	margin-left: 15px;
 	cursor: pointer;
 `
 

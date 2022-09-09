@@ -53,11 +53,12 @@ const Search = styled.input`
 	font-size: 16px;
 	margin-left: 7px;
 	width: 50%;
+	height: 100%;
 	color: gray;
 	font-family: 'Dosis', sans-serif;
 
 	&:focus {
-		border: none;
+		outline: none;
 	}
 `
 

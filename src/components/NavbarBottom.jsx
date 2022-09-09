@@ -32,6 +32,7 @@ const MenuItem = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-weight: 500;
 	color: gray;
 	cursor: pointer;
 	border-top: ${(props) => props.page === 'home' && '2px solid aquamarine'};
